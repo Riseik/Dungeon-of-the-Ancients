@@ -15,7 +15,7 @@ int main()
     bool quite = false;
     while (!quite)
     {
-        Menu menu(&option);
+        Menu menu(option);
         menu.MenuLoop();
         Game game;
         game.GameLoop();

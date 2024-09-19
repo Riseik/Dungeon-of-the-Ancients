@@ -5,9 +5,9 @@
 
 
 
-Menu::Menu(OptionnalValue* opt)
+Menu::Menu(OptionnalValue& opt) : option(opt)
 {
-    option = opt;
+    
 }
 
 void Menu::MainMenu()
@@ -47,10 +47,10 @@ void Menu::MenuOption()
         PrintTitle();
         std::cout << "Insert Hero's life : ";
         std::cin >> Answer;
-        option->HeroHealth = Answer;
+        option.HeroHealth = Answer;
         std::cout << "Insert Hero's damage : ";
         std::cin >> Answer;
-        option->HeroDamage = Answer;
+        option.HeroDamage = Answer;
         MenuOption();
         break;
 
@@ -58,10 +58,10 @@ void Menu::MenuOption()
         PrintTitle();
         std::cout << "Insert Golem life : ";
         std::cin >> Answer;
-        option->GolemHealth = Answer;
+        option.GolemHealth = Answer;
         std::cout << "Insert Golem damage : ";
         std::cin >> Answer;
-        option->GolemDamage = Answer;
+        option.GolemDamage = Answer;
         MenuOption();
         break;
 
@@ -69,10 +69,10 @@ void Menu::MenuOption()
         PrintTitle();
         std::cout << "Insert Spectre life : ";
         std::cin >> Answer;
-        option->SpectreHealth = Answer;
+        option.SpectreHealth = Answer;
         std::cout << "Insert Spectre damage : ";
         std::cin >> Answer;
-        option->SpectreDamage = Answer;
+        option.SpectreDamage = Answer;
         MenuOption();
         break;
 
@@ -80,10 +80,10 @@ void Menu::MenuOption()
         PrintTitle();
         std::cout << "Insert Faucheur life : ";
         std::cin >> Answer;
-        option->FaucheurHealth = Answer;
+        option.FaucheurHealth = Answer;
         std::cout << "Insert Faucheur damage : ";
         std::cin >> Answer;
-        option->FaucherDamage = Answer;
+        option.FaucherDamage = Answer;
         MenuOption();
         break;
 

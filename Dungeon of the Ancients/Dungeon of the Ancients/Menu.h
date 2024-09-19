@@ -5,14 +5,14 @@
 class Menu
 {
 public:
-	Menu(OptionnalValue*);
+	Menu(OptionnalValue&);
 	void MainMenu();
 	void MenuOption();
 	void MenuLoop();
 
 	bool StartGame = false;
 	int Answer = 0;
-	OptionnalValue* option;
+	OptionnalValue& option;
 	void PrintTitle();
 
 };
