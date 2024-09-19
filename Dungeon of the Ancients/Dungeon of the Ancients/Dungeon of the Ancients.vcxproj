@@ -127,7 +127,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Dungeon of the Ancients.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Faucheur.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Golem.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Spectre.cpp" />
+    <ClCompile Include="Tile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Faucheur.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Golem.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="Hero.h" />
+    <ClInclude Include="Menu.h" />
+    <ClInclude Include="OptionnalValue.h" />
+    <ClInclude Include="Spectre.h" />
+    <ClInclude Include="Tile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
