@@ -4,5 +4,5 @@
 class Faucheur : public Entity
 {
 public:
-	Faucheur(std::vector<int>);
+	Faucheur(std::vector<int>, OptionnalValue&);
 };

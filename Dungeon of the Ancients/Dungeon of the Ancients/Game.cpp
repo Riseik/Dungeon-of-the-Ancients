@@ -4,9 +4,11 @@
 #include <conio.h>
 
 
-Game::Game()
+Game::Game(OptionnalValue& opt)
 {
 	GameState = false;
+	option = opt;
+	grid.hero.SetStatistic(opt);
 }
 
 void Game::SetGameState(bool state)
@@ -222,7 +224,7 @@ void Game::CreateEntity(char symbol, std::vector<int> position)
 	switch (symbol) {
 	case 'G':
 	{
-		Golem golem(position);
+		Golem golem(position, option);
 		golem.m_character = symbol;
 		m_enemyList.push_back(new Golem(golem));
 		break;
@@ -230,7 +232,7 @@ void Game::CreateEntity(char symbol, std::vector<int> position)
 
 	case 'F':
 	{
-		Faucheur faucheur(position);
+		Faucheur faucheur(position, option);
 		faucheur.m_character = symbol;
 		m_enemyList.push_back(new Faucheur(faucheur));
 		break;
@@ -238,7 +240,7 @@ void Game::CreateEntity(char symbol, std::vector<int> position)
 
 	case 'S':
 	{
-		Spectre spectre(position);
+		Spectre spectre(position, option);
 		spectre.m_character = symbol;
 		m_enemyList.push_back(new Spectre(spectre));
 		break;
@@ -348,7 +350,7 @@ void Game::EnemyTurn()
 			{
 				grid.Move(EnemyMoveCheck(grid, *enemy), *enemy);
 
-				if (grid.CheckDistanceToEntity(enemy->m_pos, 2, grid.hero.m_pos)) {
+				if (grid.CheckDistanceToEntity(enemy->m_pos, 2, grid.hero)) {
 					closeEntity = enemy;
 				}
 

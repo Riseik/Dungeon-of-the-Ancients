@@ -3,6 +3,7 @@
 class OptionnalValue
 {
 public:
+	OptionnalValue(){};
 	int HeroHealth = 10;
 	int HeroDamage = 3;
 	int GolemHealth = 5;

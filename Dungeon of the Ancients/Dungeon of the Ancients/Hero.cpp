@@ -6,6 +6,13 @@ Hero::Hero()
 	m_health = option.HeroHealth;
 }
 
+void Hero::SetStatistic(OptionnalValue& opt)
+{
+	option = opt;
+	m_damage = option.HeroDamage;
+	m_health = option.HeroHealth;
+}
+
 void Hero::UpHealth(int health)
 {
 	if (m_health + health > option.HeroHealth)

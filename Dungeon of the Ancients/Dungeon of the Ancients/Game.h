@@ -5,6 +5,7 @@
 #include "Spectre.h"
 #include "Grid.h"
 #include "Hero.h"
+#include "OptionnalValue.h"
 
 #include <list>
 #include <chrono>
@@ -15,7 +16,7 @@ class Game
 {
 public:
 
-	Game();
+	Game(OptionnalValue&);
 	void SetGameState(bool);
 	void CreateEntity(char, std::vector<int>);
 	void SetEnemyList();
@@ -29,6 +30,7 @@ public:
 
 
 	void GameLoop();
+	OptionnalValue option;
 
 private:
 	Grid grid;

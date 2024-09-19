@@ -5,6 +5,7 @@
 #include "Tile.h"
 #include "Entity.h"
 #include "Hero.h"
+#include "OptionnalValue.h"
 
 /**
  * The game grid which the player and the enemies will move on
@@ -14,6 +15,7 @@ class Grid
 
 public:
 	Grid();
+
 	void SetGridSize(int);
 	void PrintGrid();
 	bool Move(std::vector<int>, Entity&);

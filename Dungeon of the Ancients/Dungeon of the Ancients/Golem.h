@@ -5,6 +5,6 @@
 class Golem : public Entity
 {
 public:
-	Golem(std::vector<int>);
+	Golem(std::vector<int>, OptionnalValue&);
 	void LoseHealth(int) override;
 };

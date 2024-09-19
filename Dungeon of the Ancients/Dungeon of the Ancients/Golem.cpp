@@ -1,7 +1,8 @@
 #include "Golem.h"
 
-Golem::Golem(std::vector<int> pos)
+Golem::Golem(std::vector<int> pos, OptionnalValue& opt)
 {
+	option = opt;
 	m_pos = pos;
 	m_character = 'G';
 	m_damage = option.GolemDamage;

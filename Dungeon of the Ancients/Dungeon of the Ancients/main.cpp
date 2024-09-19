@@ -17,7 +17,7 @@ int main()
     {
         Menu menu(option);
         menu.MenuLoop();
-        Game game;
+        Game game(option);
         game.GameLoop();
         std::system("cls");
     }
